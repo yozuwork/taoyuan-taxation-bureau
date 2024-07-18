@@ -1,0 +1,61 @@
+@import '../../node_modules/bootstrap-icons/font/bootstrap-icons.min.css';
+@import '../../node_modules/bootstrap/scss/functions';
+@import './helpers/variables';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+
+@import 'base/_base';
+
+
+//helpers
+@import 'helpers/mixin';
+
+
+
+@import 'components/button';
+
+
+
+.wrap-content{
+    @include medium{
+        width: 100%;
+        height: 100vh !important;
+    }
+}
+
+.content{
+    width: 375px;
+    height: 667px;
+    @include medium{
+        width: 100%;
+        height: 100%;
+    }
+}
+.home{
+    background: url('../images/home-bg.png');
+   
+}
+.instructions01{
+    background: url('../images/instructions01.png');
+}
+.instructions02{
+    background: url('../images/instructions02.png');
+}
+.points01{
+    background: url('../images/points01.png');
+
+}
+
+
+.card01{
+    position: absolute;
+    right: 5%;
+    top:40%;
+    transform: translate(0,-40%);
+}
+.card02{
+    position: absolute;
+    left: 5%;
+    top:40%;
+    transform: translate(0,-40%);
+}
