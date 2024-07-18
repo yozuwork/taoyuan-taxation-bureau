@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彰稅AR互動明信片</title>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <link rel="stylesheet" href="assets/css/all.css">
+    
+</head>
+<body>
+    <div class=" w-100 h-100 card" :class="currentClass">
+        <div class="card-footer mt-auto text-center bg-transparent  border-0  d-flex justify-content-around   text-nowrap">
+            <button v-show="currentClass == 'home'" class="btn btn-primary px-10 py-3 my-5" type="button"  @click="changeBackground('instructions01')">開始體驗</button>
+            <button v-show="currentClass == 'instructions01'" @click="changeBackground('home')" class="btn btn-sm btn-secondary   my-4  me-3  " type="button">上一步</button>   
+            <button v-show="currentClass == 'instructions01'" @click="changeBackground('instructions02')" class="btn btn-sm btn-primary   my-4 me-1 " type="button">下一步</button>
+    
+            <button v-show="currentClass == 'instructions02'" @click="changeBackground('instructions01')" class="btn btn-sm btn-secondary   my-4  me-3  " type="button">上一步</button>   
+            <button v-show="currentClass == 'instructions02'" @click="changeBackground('points01')" class="btn btn-sm btn-primary   my-4 me-1 " type="button">下一步</button>
+            
+            <button v-show="currentClass == 'points01'" class="btn btn-secondary px-10 py-3 my-5" type="button"  @click="changeBackground('instructions02')">返回</button>
+        </div>
+    </div>
+     
+
+ 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.37/vue.global.prod.min.js"></script>
+    <script src="assets/js/all.js"></script>
+
+    <a-entity camera></a-entity>
+    
+</body>
+</html>
