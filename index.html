@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="wrap-content d-flex justify-content-center align-items-center" style="height:80%" id="app">
-        <div class="content  mt-0 mt-sm-7 card border-0" :class="currentClass">
+        <div class="content  mt-0 mt-md-7 card border-0" :class="currentClass">
             <div class="card-footer mt-auto text-center bg-transparent  border-0  d-flex justify-content-around   text-nowrap">
                <button v-show="currentClass == 'home'" class="btn btn-primary px-10 py-3 my-5" type="button"  @click="changeBackground('instructions01')">開始體驗</button>
                <button v-show="currentClass == 'instructions01'" @click="changeBackground('home')" class="btn btn-sm btn-secondary   my-4  me-3  " type="button">上一步</button>   
@@ -25,9 +25,9 @@
        
     </div>
      <!-- 右邊 -->
-     <img class="d-block card01" src="assets/images/home-title.png" alt="">
+     <img class="d-none d-md-block card01" src="assets/images/home-title.png" alt="">
      <!-- 左邊 -->
-     <img class="d-block card02" src="assets/images/home-title.png" alt="">
+     <img class="d-none d-md-block card02" src="assets/images/home-title.png" alt="">
      
 
 

@@ -18203,6 +18203,8 @@ textarea {
 .content {
   width: 375px;
   height: 667px;
+  background-size: cover !important;
+  background-position: center !important;
 }
 @media only screen and (max-width: 768px) {
   .content {
@@ -18233,10 +18235,22 @@ textarea {
   top: 40%;
   transform: translate(0, -40%);
 }
+@media only screen and (max-width: 992px) {
+  .card01 {
+    right: 0;
+    transform: translate(0, 0) scale(0.8);
+  }
+}
 
 .card02 {
   position: absolute;
   left: 5%;
   top: 40%;
   transform: translate(0, -40%);
+}
+@media only screen and (max-width: 992px) {
+  .card02 {
+    left: 0;
+    transform: translate(0, 0) scale(0.8);
+  }
 }/*# sourceMappingURL=all.css.map */

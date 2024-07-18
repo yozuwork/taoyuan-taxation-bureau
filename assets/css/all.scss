@@ -26,10 +26,12 @@
 .content{
     width: 375px;
     height: 667px;
+    background-size: cover !important;
+    background-position: center !important;
     @include medium{
         width: 100%;
         height: 100%;
-    }
+    }    
 }
 .home{
     background: url('../images/home-bg.png');
@@ -52,10 +54,20 @@
     right: 5%;
     top:40%;
     transform: translate(0,-40%);
+    @include large{
+        right:0 ;
+        transform: translate(0,0) scale(0.8);
+
+    } 
 }
 .card02{
     position: absolute;
     left: 5%;
     top:40%;
     transform: translate(0,-40%);
+    @include large{
+        left:0 ;
+        transform: translate(0,0) scale(0.8);
+
+    } 
 }
