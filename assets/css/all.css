@@ -18123,11 +18123,11 @@ textarea.form-control-lg {
 
 html, body {
   overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   background: linear-gradient(180deg, #FFFFFF 0%, #A4D5EE 50%);
   background-size: cover;
   line-height: 31px;
@@ -18218,7 +18218,7 @@ textarea {
 }
 
 .instructions01 {
-  background: url("../images/instructions01.png");
+  background: url("../images/Instructions01.png");
 }
 
 .instructions02 {
