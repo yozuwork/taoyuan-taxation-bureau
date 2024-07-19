@@ -18126,6 +18126,11 @@ html, body {
   width: 100vw;
   height: 100vh;
 }
+@media only screen and (max-width: 768px) {
+  html, body {
+    overflow: hidden;
+  }
+}
 
 body {
   background: linear-gradient(180deg, #FFFFFF 0%, #A4D5EE 50%);
