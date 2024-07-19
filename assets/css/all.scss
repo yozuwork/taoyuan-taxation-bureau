@@ -21,10 +21,8 @@
     height: 667px;
     background-size: cover !important;
     background-position: 50% 50%; 
-    @include medium{
-        width: 100vw;
-  
-    } 
+    position: relative !important;
+
 }
 .home{
     background: url('../images/home-bg.png');

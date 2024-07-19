@@ -18177,16 +18177,30 @@ textarea {
   color: #FFFFFF !important;
   font-size: 1.5rem !important;
   white-space: nowrap;
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
+  position: absolute !important;
+  bottom: 5%;
+  left: 7.5%;
+}
+
+.content-ph .btn {
+  width: 80%;
+  left: 10.5%;
+  bottom: 9%;
 }
 
 .btn-sm, .btn-group-sm > .btn {
   height: 60px !important;
   padding: 0 2.75rem !important;
   display: block;
+  width: 45% !important;
+}
+
+.btn-left {
+  left: 3% !important;
+}
+
+.btn-right {
+  left: 52% !important;
 }
 
 .btn-primary {
@@ -18202,11 +18216,7 @@ textarea {
   height: 667px;
   background-size: cover !important;
   background-position: 50% 50%;
-}
-@media only screen and (max-width: 768px) {
-  .content {
-    width: 100vw;
-  }
+  position: relative !important;
 }
 
 .home {
