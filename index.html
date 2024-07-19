@@ -22,7 +22,7 @@
             
             <button v-show="currentClass == 'points01'" class="btn btn-secondary px-10 py-3 my-5" type="button"  @click="changeBackground('instructions02')">返回</button>
         </div>
-        <div class="content content-ph    d-block d-md-none vh-100 vw-100 " :class="currentClass" >
+        <div class="content content-ph  container   d-block d-md-none vh-100 vw-100 " :class="currentClass" >
             <button v-show="currentClass == 'home'" class="btn btn-primary px-9 py-3 mb-5" type="button"  @click="changeBackground('instructions01')">開始體驗</button>
             <button v-show="currentClass == 'instructions01'" class="btn btn-sm  btn-left btn-secondary  "  @click="changeBackground('home')"  type="button">上一步</button>   
             <button v-show="currentClass == 'instructions01'" class="btn btn-sm  btn-right  btn-primary   "@click="changeBackground('instructions02')" class="btn btn-sm btn-primary btn-right " type="button">下一步</button>
