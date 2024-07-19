@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="wrap-content d-flex justify-content-center align-items-center" style="height:100vh" id="app">
-        <div class="content  my-0 my-md-5 card border-0 " :class="currentClass">
+        <div class="content  my-0 my-md-5 card border-0 " :class="currentClass" >
             <div class="card-footer mt-auto text-center bg-transparent  border-0  d-flex justify-content-around   text-nowrap">
                <button v-show="currentClass == 'home'" class="btn btn-primary px-10 py-3 my-5" type="button"  @click="changeBackground('instructions01')">開始體驗</button>
                <button v-show="currentClass == 'instructions01'" @click="changeBackground('home')" class="btn btn-sm btn-secondary   my-4  me-3  " type="button">上一步</button>   
