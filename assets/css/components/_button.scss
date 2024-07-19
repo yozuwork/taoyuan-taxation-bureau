@@ -8,6 +8,10 @@
   font-size: 1.5rem !important;
   
   white-space:nowrap;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .btn-sm{
   height: 60px !important;

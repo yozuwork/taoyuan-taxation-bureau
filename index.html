@@ -10,18 +10,29 @@
     
 </head>
 <body>
-    <div class="wrap-content d-flex d-md-flex justify-content-center align-items-center "  id="app">
-        <div class="content  my-0 my-md-5 card border-0  " :class="currentClass" >
-            <div class="card-footer mt-auto text-center bg-transparent  border-0  d-flex justify-content-around   text-nowrap">
-               <button v-show="currentClass == 'home'" class="btn btn-primary px-9 py-3 mb-5" type="button"  @click="changeBackground('instructions01')">開始體驗</button>
-               <button v-show="currentClass == 'instructions01'" @click="changeBackground('home')" class="btn btn-sm btn-secondary   my-4  me-3  " type="button">上一步</button>   
-               <button v-show="currentClass == 'instructions01'" @click="changeBackground('instructions02')" class="btn btn-sm btn-primary   my-4 me-1 " type="button">下一步</button>
+    <div class="wrap-content d-flex  justify-content-center align-items-center h-100"  id="app">
+        <div class="content  my-0 my-md-5 card border-0   d-none d-md-block" :class="currentClass" >
+            <button v-show="currentClass == 'home'" class="btn btn-primary px-9 py-3 mb-5" type="button"  @click="changeBackground('instructions01')">開始體驗</button>
+            <button v-show="currentClass == 'instructions01'" @click="changeBackground('home')" class="btn btn-sm btn-secondary   my-4  me-3  " type="button">上一步</button>   
+            <button v-show="currentClass == 'instructions01'" @click="changeBackground('instructions02')" class="btn btn-sm btn-primary   my-4 me-1 " type="button">下一步</button>
 
-               <button v-show="currentClass == 'instructions02'" @click="changeBackground('instructions01')" class="btn btn-sm btn-secondary   my-4  me-3  " type="button">上一步</button>   
-               <button v-show="currentClass == 'instructions02'" @click="changeBackground('points01')" class="btn btn-sm btn-primary   my-4 me-1 " type="button">下一步</button>
-               
-               <button v-show="currentClass == 'points01'" class="btn btn-secondary px-10 py-3 my-5" type="button"  @click="changeBackground('instructions02')">返回</button>
+            <button v-show="currentClass == 'instructions02'" @click="changeBackground('instructions01')" class="btn btn-sm btn-secondary   my-4  me-3  " type="button">上一步</button>   
+            <button v-show="currentClass == 'instructions02'" @click="changeBackground('points01')" class="btn btn-sm btn-primary   my-4 me-1 " type="button">下一步</button>
+            
+            <button v-show="currentClass == 'points01'" class="btn btn-secondary px-10 py-3 my-5" type="button"  @click="changeBackground('instructions02')">返回</button>
+        </div>
+        <div class="content  my-0 my-md-5 card border-0  d-block d-md-none h-100 " :class="currentClass" >
+            <div class="text-nowrap">
+                <button v-show="currentClass == 'home'" class="btn btn-primary px-9 py-3 mb-5" type="button"  @click="changeBackground('instructions01')">開始體驗</button>
+                <button v-show="currentClass == 'instructions01'" @click="changeBackground('home')" class="btn btn-sm btn-secondary   my-4  me-3  " type="button">上一步</button>   
+                <button v-show="currentClass == 'instructions01'" @click="changeBackground('instructions02')" class="btn btn-sm btn-primary   my-4 me-1 " type="button">下一步</button>
+
+                <button v-show="currentClass == 'instructions02'" @click="changeBackground('instructions01')" class="btn btn-sm btn-secondary   my-4  me-3  " type="button">上一步</button>   
+                <button v-show="currentClass == 'instructions02'" @click="changeBackground('points01')" class="btn btn-sm btn-primary   my-4 me-1 " type="button">下一步</button>
+                
+                <button v-show="currentClass == 'points01'" class="btn btn-secondary px-10 py-3 my-5" type="button"  @click="changeBackground('instructions02')">返回</button>
             </div>
+    </div>
        
     </div>
      <!-- 右邊 -->
@@ -32,9 +43,9 @@
   
 
     <footer class="w-100 d-none d-md-block"></footer>
-     
+      
 
-
+ 
  
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.37/vue.global.prod.min.js"></script>

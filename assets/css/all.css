@@ -18123,8 +18123,8 @@ textarea.form-control-lg {
 
 html, body {
   overflow-x: hidden;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 body {
@@ -18177,6 +18177,10 @@ textarea {
   color: #FFFFFF !important;
   font-size: 1.5rem !important;
   white-space: nowrap;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .btn-sm, .btn-group-sm > .btn {
@@ -18193,10 +18197,6 @@ textarea {
   background: linear-gradient(180deg, #A8D8DE 0%, #8FB5BA 50%);
 }
 
-.wrap-content {
-  height: 100vh;
-}
-
 .content {
   width: 375px;
   height: 667px;
@@ -18205,9 +18205,7 @@ textarea {
 }
 @media only screen and (max-width: 768px) {
   .content {
-    width: 100%;
-    height: 100%;
-    background-position: 50% 50%;
+    width: 100vw;
   }
 }
 

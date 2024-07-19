@@ -15,20 +15,16 @@
 
 
 
-.wrap-content {
-    height: 100vh;
-}
 
 .content{
     width: 375px;
     height: 667px;
     background-size: cover !important;
-    background-position: 50% 50%;
+    background-position: 50% 50%; 
     @include medium{
-        width: 100%;
-        height: 100%;
-        background-position: 50% 50%;
-    }    
+        width: 100vw;
+  
+    } 
 }
 .home{
     background: url('../images/home-bg.png');
