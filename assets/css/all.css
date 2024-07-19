@@ -18185,10 +18185,10 @@ textarea {
 .content-ph .btn {
   width: 80%;
   left: 10.5%;
-  bottom: 9%;
+  bottom: 5%;
 }
 .content-ph .btn-sm, .content-ph .btn-group-sm > .btn {
-  bottom: 12%;
+  bottom: 7%;
 }
 
 .btn-sm, .btn-group-sm > .btn {
