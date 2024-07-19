@@ -10,26 +10,17 @@
     
 </head>
 <body>
-    <div class=" w-100 h-100 card" :class="currentClass">
-        <div class="card-footer mt-auto text-center bg-transparent  border-0  d-flex justify-content-around   text-nowrap">
-            <button v-show="currentClass == 'home'" class="btn btn-primary px-10 py-3 my-5" type="button"  @click="changeBackground('instructions01')">開始體驗</button>
-            <button v-show="currentClass == 'instructions01'" @click="changeBackground('home')" class="btn btn-sm btn-secondary   my-4  me-3  " type="button">上一步</button>   
-            <button v-show="currentClass == 'instructions01'" @click="changeBackground('instructions02')" class="btn btn-sm btn-primary   my-4 me-1 " type="button">下一步</button>
-    
-            <button v-show="currentClass == 'instructions02'" @click="changeBackground('instructions01')" class="btn btn-sm btn-secondary   my-4  me-3  " type="button">上一步</button>   
-            <button v-show="currentClass == 'instructions02'" @click="changeBackground('points01')" class="btn btn-sm btn-primary   my-4 me-1 " type="button">下一步</button>
-            
-            <button v-show="currentClass == 'points01'" class="btn btn-secondary px-10 py-3 my-5" type="button"  @click="changeBackground('instructions02')">返回</button>
-        </div>
-    </div>
-     
-
- 
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.37/vue.global.prod.min.js"></script>
-    <script src="assets/js/all.js"></script>
-
-    <a-entity camera></a-entity>
+     <style>
+        div{
+            background-image: url('assets/images/home-bg.png');
+            width: 100vw;
+           
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+     </style>  
+    <div class="h-100"></div>
     
 </body>
 </html>
