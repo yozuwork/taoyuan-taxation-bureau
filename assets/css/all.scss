@@ -30,7 +30,7 @@
     background-position: top;
     @include medium{
         width: 100vw;
-        height: calc(100vh - 60px); /* 适当调整减去地址栏高度 */
+        height: calc(100vh - 100px); /* 适当调整减去地址栏高度 */
     }    
 }
 .home{
