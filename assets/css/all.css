@@ -18187,6 +18187,9 @@ textarea {
   left: 10.5%;
   bottom: 9%;
 }
+.content-ph .btn-sm, .content-ph .btn-group-sm > .btn {
+  bottom: 12%;
+}
 
 .btn-sm, .btn-group-sm > .btn {
   height: 60px !important;
