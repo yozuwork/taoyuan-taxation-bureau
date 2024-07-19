@@ -18209,7 +18209,7 @@ textarea {
 @media only screen and (max-width: 768px) {
   .content {
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 20px); /* 适当调整减去地址栏高度 */
   }
 }
 

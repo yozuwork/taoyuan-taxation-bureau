@@ -28,10 +28,9 @@
     height: 667px;
     background-size: cover !important;
     background-position: top;
-    
     @include medium{
         width: 100vw;
-        height: 100vh;
+        height: calc(100vh - 20px); /* 适当调整减去地址栏高度 */
     }    
 }
 .home{
