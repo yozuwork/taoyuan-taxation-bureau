@@ -27,11 +27,11 @@
     width: 375px;
     height: 667px;
     background-size: cover !important;
-    background-position: center !important;
+    background-position: top;
+    
     @include medium{
         width: 100vw;
         height: 100vh;
-        min-height: 667px;
     }    
 }
 .home{
