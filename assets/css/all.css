@@ -18123,7 +18123,7 @@ textarea.form-control-lg {
 
 html, body {
   overflow-x: hidden;
-  width: 100vw;
+  width: 100%;
   height: 100%;
 }
 
@@ -18193,23 +18193,21 @@ textarea {
   background: linear-gradient(180deg, #A8D8DE 0%, #8FB5BA 50%);
 }
 
-@media only screen and (max-width: 768px) {
-  .wrap-content {
-    width: 100%;
-    height: 100vh !important;
-  }
+.wrap-content {
+  height: 100vh;
 }
 
 .content {
   width: 375px;
   height: 667px;
   background-size: cover !important;
-  background-position: top;
+  background-position: 50% 50%;
 }
 @media only screen and (max-width: 768px) {
   .content {
-    width: 100vw;
-    height: calc(100vh - 100px); /* 适当调整减去地址栏高度 */
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
   }
 }
 

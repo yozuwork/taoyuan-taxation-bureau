@@ -9,28 +9,25 @@
 
 //helpers
 @import 'helpers/mixin';
-
 @import 'base/_base';
 
 @import 'components/button';
 
 
 
-.wrap-content{
-    @include medium{
-        width: 100%;
-        height: 100vh !important;
-    }
+.wrap-content {
+    height: 100vh;
 }
 
 .content{
     width: 375px;
     height: 667px;
     background-size: cover !important;
-    background-position: top;
+    background-position: 50% 50%;
     @include medium{
-        width: 100vw;
-        height: calc(100vh - 100px); /* 适当调整减去地址栏高度 */
+        width: 100%;
+        height: 100%;
+        background-position: 50% 50%;
     }    
 }
 .home{
