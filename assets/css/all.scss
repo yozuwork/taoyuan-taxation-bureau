@@ -31,6 +31,7 @@
     @include medium{
         width: 100vw;
         height: 100vh;
+        min-height: 667px;
     }    
 }
 .home{
@@ -38,7 +39,7 @@
    
 }
 .instructions01{
-    background: url('../images/Instructions01.png');
+    background: url('../images/instructions01.png');
 }
 .instructions02{
     background: url('../images/instructions02.png');
