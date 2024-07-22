@@ -18340,6 +18340,10 @@ textarea {
   background: url("../images/points01.png");
 }
 
+.points01-ph {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .poster {
   background: url("../images/poster.png");
 }
