@@ -50,7 +50,24 @@
 
 .poster{
     background: url('../images/poster.png');
+    @include small{
+        background:none;
+    }
 
+}
+.poster-page{
+    @include small{
+       width: 100vw;
+       height: 100vh;
+       background: url('../images/poster.png');
+       background-size: cover;
+       background-position: center;
+    }
+}
+.poster-h1{
+    @include small{
+         font-size: 3rem !important;
+     }
 }
 
 

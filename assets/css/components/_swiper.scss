@@ -1,43 +1,35 @@
-.wrap-swiper {
-  position: absolute;
-  width: 100%;
-  top: 12%;
-  height: 100%;
-}
+.slides-container {
+  margin: auto;
 
-.swiper {
+  @include small{
+    width: 100vw;
+    height: 100vh;  
+  }
+ 
+}
+.slide {
+  display: none;
   width: 338px;
   height: 338px;
-}
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  animation:  slideIn 0.5s ;
+  @include small{
+    width: calc(338px * 1.2);
+    height:calc(338px * 1.2);
+   margin: auto;
+    margin-top: 1rem;
+  
+ }
+  
 }
-
-.swiper-slide img {
-  display: block;
+.slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
-
-.swiper-pagination {
-
-  box-sizing: border-box;
-  position: absolute !important;
-  bottom: 25% !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+.active {
+  display: block;
 }
-
-.swiper-pagination-bullet {
+.swiper-button{
   width: 48px;
   height: 44px;
   text-align: center;
@@ -55,52 +47,28 @@
   margin: 0 5px;
 }
 
-.swiper-pagination-bullet-active {
+.swiper-button.active-button {
   color: #fff;
   background: linear-gradient(180deg, #FAE6C4 0%, #F6CF8E 50%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.swiper-pagination-custom {
-  display: flex;
-  align-items: center;
-}
-.swiper-button{
- 
-  
-
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  color: #FFFFFF;
-  width: 48px;
-  height: 44px;
-
-
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid #FFFFFF;
-  border-radius: 15px;   
-
-
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-.swiper-button-prev {
-    margin-right: 5px;
-    position: absolute;
-    left: 10%;
-}
-
-.swiper-button-next {
-  right: 10%;
-}
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  content: none !important; /* 移除默认内容 */
-}
-.poster-h1{
-  color: #FFFFFF !important;
-  z-index: 1000 ;
-  position: relative;
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }

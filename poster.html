@@ -6,28 +6,91 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/all.css">
+    
 </head>
 <body>
-   <div class="d-none d-sm-flex align-items-center h-100 ">
-        <div class="container d-flex align-items-center mb-6 ">
-             <div class="d-none d-md-block" ><img src="assets/images/home-title.png" alt=""></div>
-                <div class="content instructions02 d-flex justify-content-end flex-column " >
-                    <div class="d-flex justify-content-center"> 
-                        <button onclick="window.location.href='instructions01.html'" class="btn btn-sm btn-secondary  py-3 mb-5 me-3  " type="button" >上一步</a></button>
-                        <button onclick="window.location.href='points01.html'" class="btn btn-sm btn-primary  py-3 mb-5  " type="button" >下一步</button>
+    <div class="poster-page d-flex align-items-center h-100" >
+        <div class="container d-flex align-items-center mb-6">
+            <div class="d-none d-md-block"><img src="assets/images/home-title.png" alt=""></div>
+            <div class="content poster d-flex justify-content-center flex-column">
+                <h1 class="poster-h1 pt-6 h1  pt-lg-4 h2 w-100 text-center text-light mb-auto">- 稅務知識圖卡 -</h1>
+                <div class="slides-container">
+                    <div id="slides" class="mb-3"></div>
+                    <div class="buttons mb-6 d-flex justify-content-center">
+                        <button id="prevBtn" class="swiper-button"><</button>
+                        <span id="slideButtons"></span>
+                        <button id="nextBtn" class="swiper-button">></button>
                     </div>
                 </div>
-             <div class="d-none d-md-block"><img src="assets/images/home-title.png" alt=""></div>
+                <div class="d-flex justify-content-center"> 
+                    <button onclick="window.location.href='points01.html'" class="btn btn-sm btn-secondary py-3 mb-5 me-3 d-flex  justify-content-center align-items-center" type="button">返回</button>
+                    <button onclick="window.location.href='points02.html'" class="btn btn-sm btn-primary py-3 mb-5  d-flex  justify-content-center align-items-center" type="button">開始答題</button>
+                </div>
+            </div>
+            <div class="d-none d-md-block"><img src="assets/images/home-title.png" alt=""></div>
         </div> 
-   </div>
+    </div>
     <footer class="d-none d-sm-block"></footer>
-    <!-- 手機板 -->
-    <div class="d-flex content instructions02  d-sm-none justify-content-end flex-column" >
-        <div class="d-flex justify-content-center"> 
-            <button onclick="window.location.href='instructions01.html'" class="btn btn-sm btn-secondary  py-3 mb-5 me-3  " type="button" >上一步</a></button>
-            <button onclick="window.location.href='points01.html'" class="btn btn-sm btn-primary  py-3 mb-5  " type="button" >下一步</button>
-        </div>
-    </div>  
    
+    <script>
+        const slidesData = [
+            'assets/images/s1.png',
+            'https://thumb.ac-illust.com/30/306837819e76342840641fd1d53fd2f9_t.jpeg',
+            'assets/images/s1.png'
+        ];
+
+        const slidesContainer = document.getElementById('slides');
+        const slideButtonsContainer = document.getElementById('slideButtons');
+        let currentIndex = 0;
+
+        slidesData.forEach((imageSrc, index) => {
+            const slide = document.createElement('div');
+            slide.classList.add('slide');
+            
+            if (index === 0) {
+                slide.classList.add('active');
+            }
+            const img = document.createElement('img');
+            img.src = imageSrc;
+            slide.appendChild(img);
+            slidesContainer.appendChild(slide);
+
+            const slideButton = document.createElement('button');
+            slideButton.classList.add('swiper-button');
+            slideButton.textContent = index + 1;
+            slideButton.addEventListener('click', () => {
+                currentIndex = index;
+                showSlide(currentIndex);
+            });
+            slideButtonsContainer.appendChild(slideButton);
+        });
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            slides[index].classList.add('active');
+
+            const buttons = document.querySelectorAll('.swiper-button');
+            buttons.forEach(button => {
+                button.classList.remove('active-button');
+            });
+            buttons[index + 1].classList.add('active-button'); // +1 to account for the prev button
+        }
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slidesData.length) % slidesData.length;
+            showSlide(currentIndex);
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slidesData.length;
+            showSlide(currentIndex);
+        });
+
+        // Initialize the first button as active
+        document.querySelectorAll('.swiper-button')[1].classList.add('active-button'); // Index 1 for the first slide button
+    </script>
 </body>
 </html>

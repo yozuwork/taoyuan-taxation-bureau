@@ -18188,11 +18188,8 @@ textarea {
 
 .btn-sm, .btn-group-sm > .btn {
   height: 60px !important;
-  padding: 0 2.75rem !important;
   display: block;
   width: 45%;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .btn-left {
@@ -18211,46 +18208,41 @@ textarea {
   background: linear-gradient(180deg, #A8D8DE 0%, #8FB5BA 50%);
 }
 
-.wrap-swiper {
-  position: absolute;
-  width: 100%;
-  top: 12%;
-  height: 100%;
+.slides-container {
+  margin: auto;
+}
+@media only screen and (max-width: 576px) {
+  .slides-container {
+    width: 100vw;
+    height: 100vh;
+  }
 }
 
-.swiper {
+.slide {
+  display: none;
   width: 338px;
   height: 338px;
+  animation: slideIn 0.5s;
+}
+@media only screen and (max-width: 576px) {
+  .slide {
+    width: 405.6px;
+    height: 405.6px;
+    margin: auto;
+    margin-top: 1rem;
+  }
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
+.slide img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
-.swiper-pagination {
-  box-sizing: border-box;
-  position: absolute !important;
-  bottom: 25% !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+.active {
+  display: block;
 }
 
-.swiper-pagination-bullet {
+.swiper-button {
   width: 48px;
   height: 44px;
   text-align: center;
@@ -18268,49 +18260,30 @@ textarea {
   margin: 0 5px;
 }
 
-.swiper-pagination-bullet-active {
+.swiper-button.active-button {
   color: #fff;
   background: linear-gradient(180deg, #FAE6C4 0%, #F6CF8E 50%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.swiper-pagination-custom {
-  display: flex;
-  align-items: center;
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
-
-.swiper-button-prev,
-.swiper-button-next {
-  color: #FFFFFF;
-  width: 48px;
-  height: 44px;
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid #FFFFFF;
-  border-radius: 15px;
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
-
-.swiper-button-prev {
-  margin-right: 5px;
-  position: absolute;
-  left: 10%;
-}
-
-.swiper-button-next {
-  right: 10%;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  content: none !important; /* 移除默认内容 */
-}
-
-.poster-h1 {
-  color: #FFFFFF !important;
-  z-index: 1000;
-  position: relative;
-}
-
 .content {
   width: 375px;
   height: 667px;
@@ -18348,6 +18321,27 @@ textarea {
 
 .poster {
   background: url("../images/poster.png");
+}
+@media only screen and (max-width: 576px) {
+  .poster {
+    background: none;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .poster-page {
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/poster.png");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .poster-h1 {
+    font-size: 3rem !important;
+  }
 }
 
 .card01 {
