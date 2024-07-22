@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/all.css">
 </head>
-
 <style>
     body{
         overflow: hidden;
@@ -20,14 +19,12 @@
         height: 50vh !important;
         position: absolute !important;
         left: 50% !important;
-        top:44% !important;
+        top: 44% !important;
         transform: translate(-50%, -50%) !important;
         z-index: 99999 !important;
         border: 5px solid #fff !important;
-        
-    
     }
-    .arbox , a-scene{
+    .arbox, a-scene{
         position: absolute !important;
     }
 </style>
@@ -38,7 +35,24 @@
 
     document.addEventListener('DOMContentLoaded', function () {
         arbox = document.querySelector('.arbox');
+        adjustVideoSize();
     });
+
+    function adjustVideoSize() {
+        var video = document.querySelector('a-scene').querySelector('video');
+        if (video) {
+            video.style.width = '500px';
+            video.style.height = '500px';
+            video.style.position = 'absolute';
+            video.style.top = '50%';
+            video.style.left = '50%';
+            video.style.transform = 'translate(-50%, -50%)';
+            video.style.zIndex = '99999';
+            video.style.border = '5px solid #fff';
+        } else {
+            setTimeout(adjustVideoSize, 500);
+        }
+    }
 
     AFRAME.registerComponent('image-tracker-1', {
         init: function () {
@@ -48,7 +62,6 @@
         tick: function() {
             if (this.el.object3D.visible == true) {
                 console.log("image-tracker-1 detected");
-                // 掃描到辨識點
                 arbox.style.display = "block";
                 alert("辨識成功");
                 step = 2;
@@ -70,30 +83,27 @@
             }
         }
     });
- </script>
+</script>
 
 <body>
-   
-   <div class="d-none d-sm-flex align-items-center h-100 ">
-        <div class="container d-flex align-items-center mb-6 ">
-             <div class="d-none d-md-block" ><img src="assets/images/home-title.png" alt=""></div>
-                <div class="content points01 d-flex justify-content-end flex-column " >
-                    
-                    <div class="d-flex justify-content-center">
-                        <button onclick="window.location.href='instructions01.html'" class="btn btn-secondary px-9 py-3  mb-5" type="button" >返回</button>
-                    </div>
+    <div class="d-none d-sm-flex align-items-center h-100">
+        <div class="container d-flex align-items-center mb-6">
+            <div class="d-none d-md-block"><img src="assets/images/home-title.png" alt=""></div>
+            <div class="content points01 d-flex justify-content-end flex-column">
+                <div class="d-flex justify-content-center">
+                    <button onclick="window.location.href='instructions01.html'" class="btn btn-secondary px-9 py-3 mb-5" type="button">返回</button>
                 </div>
-             <div class="d-none d-md-block"><img src="assets/images/home-title.png" alt=""></div>
-        </div> 
-   </div>
+            </div>
+            <div class="d-none d-md-block"><img src="assets/images/home-title.png" alt=""></div>
+        </div>
+    </div>
     <footer class="d-none d-sm-block"></footer>
     <!-- 手機板 -->
-    <div class="d-flex content points01-ph  d-sm-none justify-content-end flex-column w-100 h-100" >
+    <div class="d-flex content points01-ph d-sm-none justify-content-end flex-column w-100 h-100">
         <div class="d-flex justify-content-center">
-            <button onclick="window.location.href='instructions01.html'" class="btn btn-secondary px-9 py-3  mb-8" type="button" >返回</button>
+            <button onclick="window.location.href='instructions01.html'" class="btn btn-secondary px-9 py-3 mb-8" type="button">返回</button>
         </div>
-    </div>  
-   
+    </div>
 
     <!-- AR -->
     <a-scene
@@ -102,7 +112,7 @@
         renderer="logarithmicDepthBuffer: true;"
         embedded
         device-orientation-permission-ui="enabled: false"
-        arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+        arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">
         <a-nft
             type='nft'
             url='https://yozuwork.github.io/WEBARImageTracking2.0/assets/tracking_target/marker'
@@ -133,6 +143,5 @@
         </a-nft>
         <a-entity camera></a-entity>
     </a-scene>
-
 </body>
 </html>
