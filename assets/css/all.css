@@ -18226,8 +18226,6 @@ textarea {
 }
 @media only screen and (max-width: 576px) {
   .slide {
-    width: 405.6px;
-    height: 405.6px;
     margin: auto;
     margin-top: 1rem;
   }
