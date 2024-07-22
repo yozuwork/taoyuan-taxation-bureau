@@ -30,6 +30,14 @@
     .arbox, a-scene{
         position: absolute !important;
     }
+    .ar-img{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        top:8%;
+        z-index: 9999999 !important;
+    }
 </style>
 <script>
     var step = 1;
@@ -89,6 +97,7 @@
 </script>
 
 <body>
+    <div class="ar-img"><img src="assets/images/home-title.png" alt=""></div>
     <div class="d-none d-sm-flex align-items-center h-100">
         <div class="container d-flex align-items-center mb-6">
             <div class="d-none d-md-block"><img src="assets/images/home-title.png" alt=""></div>
@@ -104,7 +113,7 @@
     <!-- 手機板 -->
     <div class="d-flex content points01-ph d-sm-none justify-content-end flex-column w-100 h-100">
         <div class="d-flex justify-content-center">
-            <button onclick="window.location.href='instructions01.html'" class="btn btn-secondary px-9 py-3 mb-8" type="button">返回</button>
+            <button onclick="window.location.href='instructions01.html'" class="btn btn-secondary px-9 py-3 mb-4" type="button">返回</button>
         </div>
     </div>
 
