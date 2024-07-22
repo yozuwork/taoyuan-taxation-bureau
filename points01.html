@@ -11,6 +11,7 @@
 </head>
 
 <style>
+
     video{
         width: 400px !important;
         height: 400px !important;
@@ -19,6 +20,9 @@
         top:44% !important;
         transform: translate(-50%, -50%) !important;
     
+    }
+    .arbox , a-scene{
+        position: absolute !important;
     }
 </style>
 <script>
@@ -78,7 +82,7 @@
    </div>
     <footer class="d-none d-sm-block"></footer>
     <!-- 手機板 -->
-    <div class="d-flex content points01  d-sm-none justify-content-end flex-column" >
+    <div class="d-flex content points01  d-sm-none justify-content-end flex-column w-100 h-100" >
         <div class="d-flex justify-content-center">
             <button onclick="window.location.href='instructions01.html'" class="btn btn-secondary px-9 py-3  mb-5" type="button" >返回</button>
         </div>
@@ -87,6 +91,7 @@
 
     <!-- AR -->
     <a-scene
+        class="arbox"
         vr-mode-ui="enabled: false;"
         renderer="logarithmicDepthBuffer: true;"
         embedded

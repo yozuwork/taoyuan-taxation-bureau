@@ -18127,8 +18127,9 @@ a {
 
 html, body {
   overflow-x: hidden;
-  width: 100vw;
-  height: 100vh;
+  width: 100vw !important;
+  height: 100vh !important;
+  margin: 0 !important;
 }
 
 body {
@@ -18319,6 +18320,7 @@ textarea {
   .content {
     width: 100vw;
     height: 100vh;
+    z-index: 10000;
   }
 }
 
