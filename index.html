@@ -3,54 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>彰稅AR互動明信片</title>
-    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-    <style href="assets/css/reset.css"></style>
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/all.css">
-    
 </head>
 <body>
-    <div class="wrap-content d-flex  justify-content-center align-items-center vh-100 vw-100"  id="app">
-        <div class="content  my-0 my-md-5 card border-0   d-none d-md-block" :class="currentClass" >
-            <button v-show="currentClass == 'home'" class="btn btn-primary px-9 py-3 mb-5" type="button"  @click="changeBackground('instructions01')">開始體驗</button>
-            <button v-show="currentClass == 'instructions01'" @click="changeBackground('home')" class="btn btn-sm btn-left btn-secondary   my-4  me-3  " type="button">上一步</button>   
-            <button v-show="currentClass == 'instructions01'" @click="changeBackground('instructions02')" class="btn btn-sm  btn-right btn-primary   my-4 me-1 " type="button">下一步</button>
-
-            <button v-show="currentClass == 'instructions02'" @click="changeBackground('instructions01')" class="btn btn-sm  btn-left btn-secondary   my-4  me-3  " type="button">上一步</button>   
-            <button v-show="currentClass == 'instructions02'" @click="changeBackground('points01')" class="btn btn-sm  btn-right  btn-primary   my-4 me-1 " type="button">下一步</button>
-            
-            <button v-show="currentClass == 'points01'" class="btn btn-secondary px-10 py-3 my-5" type="button"  @click="changeBackground('instructions02')">返回</button>
-        </div>
-        <div class="content content-ph  container   d-block d-md-none vh-100 vw-100 " :class="currentClass" >
-            <button v-show="currentClass == 'home'" class="btn btn-primary px-9 py-3 mb-5" type="button"  @click="changeBackground('instructions01')">開始體驗</button>
-            <button v-show="currentClass == 'instructions01'" class="btn btn-sm  btn-left btn-secondary  "  @click="changeBackground('home')"  type="button">上一步</button>   
-            <button v-show="currentClass == 'instructions01'" class="btn btn-sm  btn-right  btn-primary   "@click="changeBackground('instructions02')" class="btn btn-sm btn-primary btn-right " type="button">下一步</button>
-
-            <button v-show="currentClass == 'instructions02'" @click="changeBackground('instructions01')" class="btn btn-sm btn-left  btn-secondary    " type="button">上一步</button>   
-            <button v-show="currentClass == 'instructions02'" @click="changeBackground('points01')" class="btn btn-sm btn-primary  btn-right  " type="button">下一步</button>
-            
-            <button v-show="currentClass == 'points01'" class="btn btn-secondary px-10 py-3 my-5" type="button"  @click="changeBackground('instructions02')">返回</button>
-        </div>
-
-    </div>
-     <!-- 右邊 -->
-     <img class="d-none d-md-block card01" src="assets/images/home-title.png" alt="">
-     <!-- 左邊 -->
-     <img class="d-none d-md-block card02" src="assets/images/home-title.png" alt="">
-     
-  
-
-    <footer class="w-100 d-none d-md-block"></footer>
-      
-
- 
- 
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.37/vue.global.prod.min.js"></script>
-    <script src="assets/js/all.js"></script>
-
-    <a-entity camera></a-entity>
-    
+   <div class="d-none d-sm-flex align-items-center h-100 ">
+        <div class="container d-flex align-items-center mb-6 ">
+             <div class="d-none d-md-block" ><img src="assets/images/home-title.png" alt=""></div>
+                <div class="content home d-flex justify-content-end flex-column " >
+                    <div class="d-flex justify-content-center">
+                        <a href="instructions01.html"><button class="btn btn-primary px-9 py-3  mb-5" type="button" >開始體驗</button></a>
+                    </div>
+                </div>
+             <div class="d-none d-md-block"><img src="assets/images/home-title.png" alt=""></div>
+        </div> 
+   </div>
+    <footer class="d-none d-sm-block"></footer>
+    <!-- 手機板 -->
+    <div class="d-flex content home  d-sm-none justify-content-end flex-column" >
+       <div class="d-flex justify-content-center"> <button class="btn btn-primary px-8 py-3 mb-5  " type="button" >開始體驗</button></div>   
+    </div>  
+   
 </body>
 </html>

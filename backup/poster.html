@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彰稅AR互動明信片</title>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <style href="assets/css/reset.css"></style>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/all.css">
+  
+    
+</head>
+<body>
+    <div class="wrap-content d-flex  justify-content-center align-items-center vh-100 vw-100"  id="app">
+        <div class="content  my-0 my-md-5 card border-0   d-none d-md-block poster"  >
+            <h1 class="poster-h1 pt-4 h2 w-100 text-center text-light">- 稅務知識圖卡 -</h1>
+            <div class="wrap-swiper">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="assets/images/s1.png" alt=""></div>
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+    
+                    </div>
+                   
+                </div> 
+            </div>
+             <!-- Add Pagination -->
+             <div class="swiper-pagination">
+                
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination-bullets"></div>
+            </div>
+             <button   class="btn btn-sm btn-left btn-secondary   my-4  me-3  " type="button">上一步</button>   
+             <button   class="btn btn-sm  btn-right btn-primary   my-4 me-1 " type="button">下一步</button>
+        </div>
+        <div class="content content-ph  container   d-block d-md-none vh-100 vw-100 " :class="currentClass" >
+            <button  class="btn btn-sm btn-left btn-secondary   my-4  me-3  " type="button">上一步</button>   
+            <button  class="btn btn-sm  btn-right btn-primary   my-4 me-1 " type="button">下一步</button>
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="assets/js/swiper.js"></script>
+       
+
+    
+        
+
+    </div>
+     <!-- 右邊 -->
+     <img class="d-none d-md-block card01" src="assets/images/home-title.png" alt="">
+     <!-- 左邊 -->
+     <img class="d-none d-md-block card02" src="assets/images/home-title.png" alt="">
+     
+  
+
+    <footer class="w-100 d-none d-md-block"></footer>
+      
+
+ 
+ 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.37/vue.global.prod.min.js"></script>
+    <script type="module" src="assets/js/all.js"></script>
+
+    <a-entity camera></a-entity>
+    
+</body>
+</html>

@@ -12,7 +12,7 @@
 @import 'base/_base';
 
 @import 'components/button';
-
+@import 'components/swiper';
 
 
 
@@ -22,6 +22,10 @@
     background-size: cover !important;
     background-position: 50% 50%; 
     position: relative !important;
+    @include small{
+        width: 100vw;
+        height: 100vh;
+    }
 
 }
 .home{
@@ -36,6 +40,10 @@
 }
 .points01{
     background: url('../images/points01.png');
+
+}
+.poster{
+    background: url('../images/poster.png');
 
 }
 
