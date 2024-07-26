@@ -18282,6 +18282,12 @@ textarea {
     transform: translateX(-100%);
   }
 }
+.ar-img-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 .content {
   width: 375px;
   height: 667px;
@@ -18311,10 +18317,6 @@ textarea {
 
 .points01 {
   background: url("../images/points01.png");
-}
-
-.points01-ph {
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .poster {
