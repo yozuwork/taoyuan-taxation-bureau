@@ -57,9 +57,6 @@
     }
 </style>
 <script>
-
-    
-
     var step = 1;
     var is_notified = false;
     var arbox;
@@ -103,20 +100,20 @@
         }
     });
 
-    AFRAME.registerComponent('image-tracker-2', {
-        init: function () {
-            console.log("image-tracker-2 init");
-        },
-        tick: function() {
-            if (this.el.object3D.visible == true) {
-                console.log("image-tracker-2 detected");
-                if (step != 2 && !is_notified) {
-                    is_notified = true;
-                    alert("請先掃描封面辨識點");
-                }
-            }
-        }
-    });
+    // AFRAME.registerComponent('image-tracker-2', {
+    //     init: function () {
+    //         console.log("image-tracker-2 init");
+    //     },
+    //     tick: function() {
+    //         if (this.el.object3D.visible == true) {
+    //             console.log("image-tracker-2 detected");
+    //             if (step != 2 && !is_notified) {
+    //                 is_notified = true;
+    //                 alert("請先掃描封面辨識點");
+    //             }
+    //         }
+    //     }
+    // });
 </script>
 
 <body>
