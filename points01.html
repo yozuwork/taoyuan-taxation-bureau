@@ -55,6 +55,12 @@
     }
 </style>
 <script>
+
+    $(window).ready(function() {
+    var bodyWidth = $(window).width();
+    $(".header").width(bodyWidth).css('width', bodyWidth);
+    });
+
     var step = 1;
     var is_notified = false;
     var arbox;
@@ -113,7 +119,7 @@
 
 <body>
     <div class="ar-img d-block d-sm-none"><img src="assets/images/home-title.png" alt=""></div>
-    <div class="d-none d-sm-flex align-items-center h-100">
+    <div class="header d-none d-sm-flex align-items-center h-100">
         <div class="container d-flex align-items-center mb-6">
             <div class="d-none d-md-block"><img src="assets/images/home-title.png" alt=""></div>
             <div class="content  d-flex  flex-column">
