@@ -14,7 +14,6 @@
         margin: 0;
         padding: 0;
         height: 100%;
-        overflow: hidden;
         position: relative !important;
         width: 100%;
     }
@@ -29,8 +28,8 @@
     }
 
     .header {
-        width: 100% !important;
-        height: 100% !important;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     video {
@@ -70,11 +69,7 @@
     }
 </style>
 <script>
-   let height = window.innerHeight;
-    window.addEventListener('resize', () => {
-        height = window.innerHeight;
-    });
-
+  
     var step = 1;
     var is_notified = false;
     var arbox;

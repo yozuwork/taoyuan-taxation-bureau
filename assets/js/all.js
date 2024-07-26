@@ -1,19 +1,11 @@
 
 
-import { swiper } from 'swiper.js';
-swiper;
-const app = Vue.createApp({
-    data() {
-        return {
-            currentClass: "home",
-            text: "hi"
-        }
-    },
-    methods: {
-        changeBackground(className) {
-            this.currentClass = className;
-        }
-   }
+let height = window.innerHeight;
+window.addEventListener('resize', () => {
+    height = window.innerHeight;
 });
 
-app.mount('#app');
+
+import { swiper } from 'swiper.js';
+swiper;
+
