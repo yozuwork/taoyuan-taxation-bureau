@@ -10,79 +10,59 @@
     <link rel="stylesheet" href="assets/css/all.css">
 </head>
 <style>
-
-
-    @media screen and (max-width: 576px) {
-        body {
-            background-image: none;
-        }
-        .footer {
-            background-image: none;
-        }
+    body{
+        overflow: hidden;
+        position: relative !important;
+      
+        
     }
-
-    video {
+ 
+    @media screen and (max-width: 576px){
+        body{
+            background-image: none ;
+        }
+        .footer{
+            background-image: none ;
+        }
+        
+    }
+    video{
         width: 100vw !important;
         height: 100vh !important;
         margin-top: 0 !important;
         position: absolute !important;
         left: 0 !important;
         right: 0 !important;
+        margin: auto !important;
         top: 0 !important;
         bottom: 0 !important;
         z-index: 2 !important;
         display: block !important;
     }
-
-    .arbox, a-scene {
+    .arbox, a-scene{
         position: absolute !important;
-        width: 100vw;
-        height: 100vh;
     }
-
-    .ar-img {
+    .ar-img{
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
         width: 95%;
-        top: 6%;
+        top:6%;
         z-index: 9999999 !important;
     }
-
-    .ar-img img {
+    .ar-img img{
         width: 100%;
     }
 </style>
 <script>
-    $(window).ready(function() {
-        var bodyWidth = $(window).width();
-        $(".header").width(bodyWidth).css('width', bodyWidth);
-    });
+
+    
 
     var step = 1;
     var is_notified = false;
     var arbox;
 
-    document.addEventListener('DOMContentLoaded', function () {
-        arbox = document.querySelector('.arbox');
-        adjustVideoSize();
-    });
-
-    function adjustVideoSize() {
-        var video = document.querySelector('a-scene').querySelector('video');
-        if (video) {
-            video.style.width = '100vw';
-            video.style.height = '100vh';
-            video.style.position = 'absolute';
-            video.style.top = '50%';
-            video.style.left = '50%';
-            video.style.transform = 'translate(-50%, -50%)';
-            video.style.zIndex = '99999';
-            video.style.border = '5px solid #fff';
-        } else {
-            setTimeout(adjustVideoSize, 500);
-        }
-    }
+   
 
     AFRAME.registerComponent('image-tracker-1', {
         init: function () {
@@ -94,7 +74,7 @@
                 console.log("image-tracker-1 detected");
                 arbox.style.display = "block";
                 step = 2;
-                window.location.href='poster.html';
+                window.location.href='poster.html'
             }
         }
     });
@@ -117,13 +97,13 @@
 
 <body>
     <div class="ar-img d-block d-sm-none"><img src="assets/images/home-title.png" alt=""></div>
-    <div class="header d-none d-sm-flex align-items-center h-100">
+    <div class="d-none d-sm-flex align-items-center h-100">
         <div class="container d-flex align-items-center mb-6">
             <div class="d-none d-md-block"><img src="assets/images/home-title.png" alt=""></div>
-            <div class="content d-flex flex-column">
-                <div class="ar-img-title mb-auto pt-4" style="z-index: 3;"><img src="assets/images/home-title.png" alt=""></div>
+            <div class="content  d-flex  flex-column">
+                <div class="ar-img-title  mb-auto pt-4" style="z-index: 3;"><img src="assets/images/home-title.png" alt=""></div>
                 <div class="ar-img-bg"><img src="assets/images/1points01.png" alt=""></div>
-                <div class="d-flex justify-content-center mt-auto pb-5" style="z-index: 3;">
+                <div class="d-flex justify-content-center mt-auto pb-5" style="z-index:3">
                     <button onclick="window.location.href='instructions02.html'" class="btn btn-secondary px-9 py-3 mb-5" type="button">返回</button>
                 </div>
             </div>
@@ -132,9 +112,9 @@
     </div>
     <footer class="d-none d-sm-block"></footer>
     <!-- 手機板 -->
-    <div class="content d-flex d-sm-none flex-column w-100 h-100">
+    <div class=" content d-flex  d-sm-none  flex-column w-100 h-100 ">
         <div class="ar-img-bg"><img class="w-100 h-100" src="assets/images/1points01.png" alt=""></div>
-        <div class="d-flex justify-content-center mt-auto pb-5" style="z-index: 3;">
+        <div class="d-flex justify-content-center mt-auto pb-5" style="z-index:3">
             <button onclick="window.location.href='instructions02.html'" class="btn btn-secondary px-9 py-3 mb-4" type="button">返回</button>
         </div>
     </div>
