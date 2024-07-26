@@ -18358,6 +18358,13 @@ textarea {
   border: 1px solid #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
+  width: 90%;
+}
+.results-text .lottery {
+  background: #FFFFFF;
+  border: none;
+  border-radius: 15px;
+  width: 95%;
 }
 .results-text p {
   text-shadow: 0px 2px 2px #92B8BD;
@@ -18368,6 +18375,19 @@ textarea {
   background: #FFFFFF;
   border: none;
   border-radius: 15px;
+}
+
+.iframe-container {
+  position: relative;
+  width: 90%;
+  flex: 1;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .content {
@@ -18387,6 +18407,10 @@ textarea {
 
 .text-shadow {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.icon {
+  display: inline-block;
 }
 
 .home {

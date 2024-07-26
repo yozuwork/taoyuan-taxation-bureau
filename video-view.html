@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <style>
+        
+            @media screen and (max-width: 576px){
+                body{
+                    background: url('assets/images/poster.png');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+              
+                
+            }
+       
+    </style>    
+</head>
+<body>
+   <div class="mt-4 d-block d-sm-none"></div> 
+   <div class="d-flex align-items-center h-100">
+        <div class="container d-flex align-items-center mb-6 justify-content-center">
+             <div class="d-none d-md-block"><img src="assets/images/home-title.png" alt=""></div>
+                <div class="content poster d-flex flex-column align-items-center">
+                    <div><h1 class="h2 text-center text-light py-4">- 稅務知識影片 -</h1></div>
+                    <div class="iframe-container">
+                        <iframe id="youtubeVideo1" width="560" height="170" 
+                                src="https://www.youtube.com/embed/emtg3JN4x_o?enablejsapi=1" 
+                                title="YouTube video player" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div><p class="text-light text-shadow">113 新三隻小豬 稅務篇</p></div>
+                    <div class="iframe-container">
+                        <iframe id="youtubeVideo2" width="560" height="170" 
+                                src="https://www.youtube.com/embed/PdGfWuaT_hA?enablejsapi=1" 
+                                title="YouTube video player" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div><p class="text-light text-shadow">113年房屋稅新制重點</p></div>
+                    <div class="mt-auto d-flex justify-content-center"> 
+                        <button onclick="window.location.href='index.html'" class="btn btn-sm btn-secondary  px-5 py-3 mb-5 me-3  d-flex  justify-content-center align-items-center" type="button" >返回</a></button>
+                        <button id="nextPage" class="btn btn-sm btn-primary px-5  py-3 mb-5 d-flex  justify-content-center align-items-center " type="button" >開始答題</button>
+                    </div>
+                   
+                </div>
+             <div class="d-none d-md-block"><img src="assets/images/home-title.png" alt=""></div>
+        </div> 
+   </div>
+    <footer class="d-none d-sm-block"></footer>
+
+    <script src="assets/js/iframe.js"> </script>
+ 
+   
+</body>
+</html>

@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="assets/css/all.css">
 </head>
 <body>
-   <div class="d-none d-sm-flex align-items-center h-100 ">
+   <div class="mt-4 d-block d-sm-none"></div> 
+   <div class=" d-flex align-items-center h-100 ">
         <div class="container d-flex align-items-center mb-6 justify-content-center ">
              <div class="d-none d-md-block" ><img src="assets/images/home-title.png" alt=""></div>
                 <div class="content poster d-flex  flex-column align-items-center"  >
                     <div class="mt-4"><img src="assets/images/home-title.png" alt=""></div>
                     <div class="results-text mt-3 pt-2 pb-3  px-3 text-light mb-3 d-flex  flex-column align-items-center" >
-                       <p class="h3">恭喜您完成答題</p>
+                       <p class="h3 py-3">恭喜您完成答題</p>
                        <p>請填寫抽獎人聯絡手機末三碼</p>
-                       <input id="phoneLastThree1" class="py-3 px-5 text-center" type="text" value="123">
+                       <input id="phoneLastThree" class="py-3 px-5 text-center" type="text" value="123">
                     </div>
                     <div class="text-start text-shadow text-light" style="width: 95%; font-size: 14px;">
                         填寫注意事項 <br>
@@ -26,41 +27,35 @@
                         3.確認填寫正確後，點選下方按鈕，系統即會產出專屬抽獎流水號。
                     </div>
                     <div class="mt-auto d-flex justify-content-center">
-                        <button id="generateSerial1" class="btn btn-primary px-7 py-3  mb-4" type="button" >產出抽獎流水號</button>
+                        <button id="generateSerial" class="btn btn-primary px-7 py-3  mb-4" type="button" >產出抽獎流水號</button>
                     </div>
                 </div>
              <div class="d-none d-md-block"><img src="assets/images/home-title.png" alt=""></div>
         </div> 
    </div>
-    <footer class="d-none d-sm-block"></footer>
-    <!-- 手機板 -->
-    <div class="content poster d-flex  flex-column align-items-center"  >
-        <div class="mt-4"><img src="assets/images/home-title.png" alt=""></div>
-        <div class="results-text mt-3 pt-2 pb-3  px-3 text-light mb-3 d-flex  flex-column align-items-center" >
-           <p class="h3">恭喜您完成答題</p>
-           <p>請填寫抽獎人聯絡手機末三碼</p>
-           <input id="phoneLastThree2" class="py-3 px-5 text-center" type="text" value="123">
-        </div>
-        <div class="text-start text-shadow text-light" style="width: 95%; font-size: 14px;">
-            填寫注意事項 <br>
-            1.請抽獎人確實填寫手機末三碼，範例如下： <br>
-            Ex.0987-654-321，請填寫321在上方輸入匡內。 <br>
-            2. 根據活動請正確填寫手機號碼，如填寫錯誤無法正確核實身份，抽獎資格則視為作廢。 <br>
-            3.確認填寫正確後，點選下方按鈕，系統即會產出專屬抽獎流水號。
-        </div>
-        <div class="mt-auto d-flex justify-content-center">
-            <button  id="generateSerial2" class="btn btn-primary px-7 py-3  mb-4" type="button" >產出抽獎流水號</button>
-        </div>
-    </div>
+    <footer ></footer>
+   
     <script>
-        document.getElementById('generateSerial1').addEventListener('click', function() {
-            let inputValue = document.getElementById('phoneLastThree1').value;
-            alert('輸入的數值是: ' + inputValue);
+        let is_fb = false; 
+        document.getElementById('generateSerial').addEventListener('click', function() {
+            if(is_fb){
+                window.location.href='https://www.facebook.com/pages/%E5%BD%B0%E5%8C%96%E7%A8%85%E5%8B%99%E5%B1%80/253416044757459'
+            }
+            let inputValue = document.getElementById('phoneLastThree').value;
+            let results_text = document.querySelector('.results-text');
+            results_text.innerHTML = `
+                <p class="fs-5 py-3">抽獎流水號</p>
+                <div class="py-3 px-3 text-center lottery text-dark d-flex justify-content-center">
+               
+                    <div class="d-inline-block ms-auto "> AR-1234</div> 
+                    <div class="d-inline-block ms-auto"><img class=" paste  " src="assets/images/paste.svg"></div>
+                </div>
+            `;
+            this.innerText = '前往FB抽獎';
+            is_fb = true;
+  
         });
-        document.getElementById('generateSerial2').addEventListener('click', function() {
-            let inputValue = document.getElementById('phoneLastThree2').value;
-            alert('輸入的數值是: ' + inputValue);
-        });
+
     </script>
 </body>
 </html>
