@@ -24,8 +24,8 @@
     background-position: 50% 50%; 
     position: relative !important;
     @include small{
-        width: 100vw;
-        height: 100vh;
+        width: 100dvw;
+        height: 100dvh;
         z-index: 10000 ;
     }
 
@@ -56,8 +56,8 @@
 }
 .poster-page{
     @include small{
-       width: 100vw;
-       height: 100vh;
+       width: 100dvw;
+       height: 100dvh;
        background: url('../images/poster.png');
        background-size: cover;
        background-position: center;

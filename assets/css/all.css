@@ -18297,8 +18297,8 @@ textarea {
 }
 @media only screen and (max-width: 576px) {
   .content {
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     z-index: 10000;
   }
 }
@@ -18330,8 +18330,8 @@ textarea {
 
 @media only screen and (max-width: 576px) {
   .poster-page {
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     background: url("../images/poster.png");
     background-size: cover;
     background-position: center;
