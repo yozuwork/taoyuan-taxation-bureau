@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <style>
+        .content-sm{
+            background: url('assets/images/poster.png');
+        }
+
+    </style>
+</head>
+<body>
+    <div class="resultbox correct"> <img src="assets/images/correct.png" alt=""></div>
+    <div class="resultbox mistake"> <img src="assets/images/mistake.png" alt=""></div>
+   <div class="d-none d-sm-flex align-items-center h-100 ">
+        <div class="container d-flex align-items-center mb-6 justify-content-center"  >
+             <div class="d-none d-lg-block" ><img src="assets/images/home-title.png" alt=""></div>
+                <div class="content poster  d-flex justify-content-start flex-column align-items-center "  >
+                    <div style="width: 95%;">
+                        <div> <h1 class=" h2 text-center  text-light py-4  ">- 租稅互動問答 -</h1></div>
+                        <div class="qa-text py-5 px-3 text-light mb-3 " >
+                            Q2 房屋稅新制之自住房屋稅率,須具備哪些要件?
+                        </div>
+                         <button class="ansbox w-100 text-light py-2 mb-3 text-start px-3 "  onclick="checkAnswer(this, false)">
+                            A.本人、配偶或直系親屬辦竣戶籍登記且供其實際居住
+                         </button>
+                         <button class="ansbox w-100 text-light py-2 mb-3 text-start px-3"  onclick="checkAnswer(this, false)">
+                            B.無出租或無營業
+                         </button>
+                         <button class="ansbox w-100 text-light py-2 mb-3 text-start px-3"  onclick="checkAnswer(this, false)">
+                            C.本人、配偶及未成年子女全國 3 戶以內
+                         </button>
+                         <button class="ansbox w-100 text-light py-2 mb-3 text-start px-3"   onclick="checkAnswer(this, true)">
+                            D.以上皆是
+                         </button>
+                        
+                    </div>
+                    <div class="mt-auto mb-3 " style="width: 95%;">
+                        <span class="fs-6 d-flex justify-content-center text-light ">題目 1/5</span>
+                        <div class="progress mt-2 " >
+                            
+                            <div class="progress-bar progress-bar-active" role="progressbar" style="width: 20%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar progress-bar-active-md bg-success" role="progressbar" style="width: 20%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+             <div class="d-none  d-lg-block"><img src="assets/images/home-title.png" alt=""></div>
+        </div> 
+   </div>
+    <footer class="footer d-none d-sm-block" ></footer>
+    <!-- 手機板 -->
+    <div class="content content-sm  d-flex  d-sm-none justify-content-start flex-column align-items-center " >
+        <div class="resultbox correct "> <img src="assets/images/correct.png" alt=""></div>
+        <div class="resultbox mistake"> <img src="assets/images/mistake.png" alt=""></div>
+        <div style="width: 95%;">
+            <div> <h1 class=" h2 text-center  text-light py-4  ">- 租稅互動問答 -</h1></div>
+            <div class="qa-text py-5 px-3 text-light mb-3 " >
+                Q2 房屋稅新制之自住房屋稅率,須具備哪些要件?
+            </div>
+             <button class="ansbox w-100 text-light py-2 mb-3 text-start px-3 "  onclick="checkAnswer(this, false)">
+                A.本人、配偶或直系親屬辦竣戶籍登記且供其實際居住
+             </button>
+             <button class="ansbox w-100 text-light py-2 mb-3 text-start px-3"  onclick="checkAnswer(this, false)">
+                B.無出租或無營業
+             </button>
+             <button class="ansbox w-100 text-light py-2 mb-3 text-start px-3"  onclick="checkAnswer(this, false)">
+                C.本人、配偶及未成年子女全國 3 戶以內
+             </button>
+             <button class="ansbox w-100 text-light py-2 mb-3 text-start px-3"   onclick="checkAnswer(this, true)">
+                D.以上皆是
+             </button>
+            
+        </div>
+        <div  style="width: 95%;">
+            <span class="fs-6 d-flex justify-content-center text-light ">題目 1/5</span>
+            <div class="progress mt-2 " >
+                
+                <div class="progress-bar progress-bar-active" role="progressbar" style="width: 20%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar progress-bar-active bg-success" role="progressbar" style="width: 20%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+    </div>  
+    <script>
+       let isDisabled = false; // 用于跟踪按钮是否被禁用
+
+        function checkAnswer(button, isCorrect) {
+            // 如果按钮已被禁用，则直接返回
+            if (isDisabled) return;
+
+            // 禁用所有按钮
+            isDisabled = true;
+            document.querySelectorAll('.ansbox').forEach(btn => {
+                btn.disabled = true;
+            });
+
+            // 移除所有按钮的 ansbox-active 样式
+            document.querySelectorAll('.ansbox').forEach(btn => {
+                btn.classList.remove('ansbox-active');
+            });
+
+            // 为点击的按钮添加 ansbox-active 样式
+            button.classList.add('ansbox-active');
+
+            // 显示结果框
+            if (isCorrect) {
+                document.querySelectorAll('.correct').forEach(popup => {
+                    popup.style.display = 'block';
+                });
+                setTimeout(() => {
+                    document.querySelectorAll('.correct').forEach(popup => {
+                        popup.style.display = 'none';
+                    });
+                    // 启用按钮
+                    document.querySelectorAll('.ansbox').forEach(btn => {
+                        btn.disabled = false;
+                    });
+                    isDisabled = false;
+                    window.location.href='qa03.html'
+                }, 1000); // 1秒后隐藏
+            } else {
+                document.querySelectorAll('.mistake').forEach(popup => {
+                    popup.style.display = 'block';
+                });
+                setTimeout(() => {
+                    document.querySelectorAll('.mistake').forEach(popup => {
+                        popup.style.display = 'none';
+                    });
+                    // 启用按钮
+                    document.querySelectorAll('.ansbox').forEach(btn => {
+                        btn.disabled = false;
+                    });
+                    isDisabled = false;
+                }, 1000); // 1秒后隐藏
+            }
+        }
+    </script>
+</body>
+</html>
