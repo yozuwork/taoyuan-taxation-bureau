@@ -23,7 +23,10 @@
             background-image: none;
         }
     }
-
+    .header{
+        width: 100vw;
+        height: 100vh;
+    }
     video {
         width: 100vw !important;
         height: 100vh !important;
@@ -61,9 +64,9 @@
     }
 </style>
 <script>
-    $(document).ready(function() {
-        var bodyWidth = $(window).width();
-        $(".header").width(bodyWidth).css('width', bodyWidth);
+   let height = window.innerHeight;
+    window.addEventListener('resize', () => {
+    height = window.innerHeight;
     });
 
     var step = 1;
