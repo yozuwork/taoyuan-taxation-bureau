@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="assets/css/all.css">
 </head>
 <style>
-    body {
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
         overflow: hidden;
         position: relative !important;
-        height: 100% !important;
-        width: 100% !important;
+        width: 100%;
     }
 
     @media screen and (max-width: 576px) {
@@ -25,10 +27,12 @@
             background-image: none;
         }
     }
-    .header{
+
+    .header {
         width: 100% !important;
         height: 100% !important;
     }
+
     video {
         width: 100vw !important;
         height: 100vh !important;
@@ -68,7 +72,7 @@
 <script>
    let height = window.innerHeight;
     window.addEventListener('resize', () => {
-    height = window.innerHeight;
+        height = window.innerHeight;
     });
 
     var step = 1;
