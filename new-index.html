@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/all.css">   
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="assets/js/ar.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+     <script src="assets/js/main.js" defer></script>
+     
+
+</head>
+<body >
+        <div class="wrap-contant" id="app">
+            <div v-if="orgPageShow" class="d-none d-md-block" ><img src="assets/images/home-title.png" alt=""></div>
+            <div v-if="nowPage !== 'poster' && nowPage !== 'points01'"  class="content d-flex justify-content-end flex-column md-0 mb-md-5 "  :class="nowPage === 'points01' ? 'align-items-center' : ''"   :style="{ backgroundImage: 'url(' + backgrounds[nowPage] + ')' }">
+                <div  class="d-flex justify-content-center">
+                    <button v-if="showStartButton" @click="switchBackground('instructions01')" class="btn btn-primary px-9 py-3 mb-5" type="button">
+                        開始體驗
+                    </button>
+                    <button v-if="showNavigationButtons" @click="switchBackground(previousPage)" class="btn btn-sm btn-secondary py-3 mb-5 me-3 d-flex justify-content-center align-items-center" type="button">
+                        上一步
+                    </button>
+                    <button v-if="showNavigationButtons" @click="switchBackground(nextPage)" class="btn btn-sm btn-primary py-3 mb-5 d-flex justify-content-center align-items-center" type="button">
+                        下一步
+                    </button>
+                </div>
+    
+            </div>
+
+            <!-- 稅務知識圖卡 -->
+            <iframe v-if="nowPage === 'poster'" src="poster.html" style="width: 100vw; height: 100vh;" frameborder="0"></iframe>
+
+            <!-- AR相機  -->
+            <iframe v-if="nowPage === 'points01'" src="points01.html" style="width: 100vw; height: 100vh;" frameborder="0"></iframe>
+
+            <footer class="d-none d-sm-block"></footer>
+            <div v-if="orgPageShow" class="d-none d-md-block" ><img src="assets/images/home-title.png" alt=""></div>
+
+         
+        </div>
+        <script src="assets/js/swiper.js"></script>
+</body>
+</html>
