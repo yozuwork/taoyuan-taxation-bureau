@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- JavaScript Bundle with Popper -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/all.css">
 </head>
 <body>
@@ -33,29 +36,59 @@
              <div class="d-none d-md-block"><img src="assets/images/home-title.png" alt=""></div>
         </div> 
    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            ...
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
     <footer ></footer>
-   
     <script>
-        let is_fb = false; 
+       let is_fb = false; 
         document.getElementById('generateSerial').addEventListener('click', function() {
-            if(is_fb){
-                window.location.href='https://www.facebook.com/pages/%E5%BD%B0%E5%8C%96%E7%A8%85%E5%8B%99%E5%B1%80/253416044757459'
+            if (is_fb) {
+                window.location.href = 'https://www.facebook.com/pages/%E5%BD%B0%E5%8C%96%E7%A8%85%E5%B1%80/253416044757459';
             }
+            
             let inputValue = document.getElementById('phoneLastThree').value;
             let results_text = document.querySelector('.results-text');
             results_text.innerHTML = `
                 <p class="fs-5 py-3">抽獎流水號</p>
                 <div class="py-3 px-3 text-center lottery text-dark d-flex justify-content-center">
-               
-                    <div class="d-inline-block ms-auto "> AR-1234</div> 
-                    <div class="d-inline-block ms-auto"><img class=" paste  " src="assets/images/paste.svg"></div>
+                    <div class="paste-text d-inline-block ms-auto">AR-1234</div> 
+                    <div class="btn-paste d-inline-block ms-auto"><img class="paste" src="assets/images/paste.svg"></div>
                 </div>
             `;
             this.innerText = '前往FB抽獎';
             is_fb = true;
-  
+
+            // 選取新的 .btn-paste 按鈕元素並添加事件監聽器
+          
+            const btnPaste = document.querySelector('.btn-paste');
+            btnPaste.addEventListener('click', () => {
+                const pasteText = document.querySelector('.paste-text').innerText;
+                navigator.clipboard.writeText(pasteText).then(() => {
+                    alert('複製成功');
+                }).catch(err => {
+                    alert('複製失敗: ' );
+                });
+            });
         });
+        
 
     </script>
+   
 </body>
 </html>
