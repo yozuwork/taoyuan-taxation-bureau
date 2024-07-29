@@ -18127,8 +18127,8 @@ a {
 
 html, body {
   overflow-x: hidden;
-  width: 100dvw !important;
-  height: 100dvh !important;
+  width: 100vw !important;
+  height: 100vh !important;
   margin-left: 0 !important;
   margin-top: 0 !important;
 }
@@ -18399,10 +18399,14 @@ textarea {
 }
 @media only screen and (max-width: 576px) {
   .content {
-    width: 100dvw;
-    height: 100dvh;
+    width: 100vw;
+    height: 100vh;
     z-index: 10000;
   }
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .text-shadow {
